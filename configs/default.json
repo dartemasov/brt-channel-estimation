@@ -1,0 +1,108 @@
+{
+    "model": {
+        "name": "BlockRecurrentTransformer",
+        "n_ant": 2048,
+        "n_time_steps": 5,
+        "num_tokens": 2048,
+        "dim": 2048,
+        "depth": 3,
+        "dim_head": 1024,
+        "heads": 1,
+        "max_seq_len": 2048,
+        "block_width": 1,
+        "num_state_vectors": 1,
+        "use_flash_attn": true
+    },
+    "training": {
+        "dataset": {
+            "set_size": 500000,
+            "miniset_size": 100,
+            "n_antennas": 1024,
+            "n_rf": 4,
+            "carrier_freq": 300e9,
+            "n_subcarriers": 1,
+            "bandwidth": 15e9,
+            "n_paths_min": 5,
+            "n_paths_max": 5,
+            "los_path_len": 30,
+            "scat_dist_min": 10,
+            "scat_dist_max": 25,
+            "snr_db_min": 0,
+            "snr_db_max": 20,
+            "n_workers": 128,
+            "meas_mat_path": "data/CSmatrix1024_512_AoSA.npy"
+        },
+        "loader": {
+            "batch_size": 64,
+            "num_workers": 0,
+            "prefetch_factor": null
+        },
+        "checkpoints_dir": "results/pths/",
+        "load_checkpoint_name": null,
+        "save_checkpoint_name": "debug",
+        "n_epochs": 1000,
+        "learning_rate": 5e-5,
+        "weight_decay": 0,
+        "loss_method": "last",
+        "comment": "debug",
+        "enable_writer": false
+    },
+    "validation": {
+        "dataset": {
+            "set_size": 50000,
+            "miniset_size": 100,
+            "n_antennas": 1024,
+            "n_rf": 4,
+            "carrier_freq": 300e9,
+            "n_subcarriers": 1,
+            "bandwidth": 15e9,
+            "n_paths_min": 5,
+            "n_paths_max": 5,
+            "los_path_len": 30,
+            "scat_dist_min": 10,
+            "scat_dist_max": 25,
+            "snr_db_min": 0,
+            "snr_db_max": 20,
+            "n_workers": 128,
+            "meas_mat_path": "data/CSmatrix1024_512_AoSA.npy"
+        },
+        "loader": {
+            "batch_size": 1000,
+            "num_workers": 0,
+            "prefetch_factor": null
+        }
+    },
+    "evaluation": {
+        "checkpoints_dir": "results/pths/",
+        "load_checkpoint_name": "debug",
+        "eval_last_epoch": true,
+        "results_dir": "results/txt/",
+        "comment": "",
+        "snr_db": {
+            "start": 0,
+            "stop": 20,
+            "step": 0.5
+        },
+        "dataset": {
+            "set_size": 100000,
+            "miniset_size": 100,
+            "n_antennas": 1024,
+            "n_rf": 4,
+            "carrier_freq": 300e9,
+            "n_subcarriers": 1,
+            "bandwidth": 15e9,
+            "n_paths_min": 5,
+            "n_paths_max": 5,
+            "los_path_len": 30,
+            "scat_dist_min": 10,
+            "scat_dist_max": 25,
+            "n_workers": 128,
+            "meas_mat_path": "data/CSmatrix1024_512_AoSA.npy"
+        },
+        "loader": {
+            "batch_size": 1000,
+            "num_workers": 0,
+            "prefetch_factor": null
+        }
+    }
+}
