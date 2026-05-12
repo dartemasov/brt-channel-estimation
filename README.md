@@ -118,6 +118,17 @@
 ## Citation
 
   ```Latex
+  @ARTICLE{11275916,
+  author={Artemasov, Dmitry and Shmatok, Alexander and Andreev, Kirill and Frolov, Alexey and Hanawal, Manjesh Kumar and Zlatanov, Nikola},
+  journal={IEEE Access}, 
+  title={Recurrent Transformer-Based Near-and Far-Field THz Wideband Channel Estimation for UM-MIMO}, 
+  year={2025},
+  volume={13},
+  number={},
+  pages={205396-205411},
+  keywords={Channel estimation;Transformers;Wideband;Terahertz communications;Accuracy;Adaptation models;Deep learning;Computer architecture;Antenna arrays;Matching pursuit algorithms;Deep learning;holographic MIMO;hybrid beamforming;near-field channel estimation;recurrent neural networks;THz communications;transformer neural networks},
+  doi={10.1109/ACCESS.2025.3639689}}
+
   @INPROCEEDINGS{2024Artemasov,
   author={Artemasov, Dmitry and Andreev, Kirill and Frolov, Alexey and Hanawal, Manjesh K. and Zlatanov, Nikola},
   booktitle={2024 IEEE International Multi-Conference on Engineering, Computer and Information Sciences (SIBIRCON)}, 
